@@ -1,28 +1,10 @@
 import Link from "next/link";
+import Navigate from "../components/Navigate";
 
 export default function Home() {
   return (
-    <div className="bg-white min-h-[500px] mx-[60px] mt-[60px] mb-[120px] py-10 px-[55px]">
-      <div className="flex gap-7">
-        <Link
-          href=""
-          className="relative font-semibold text-4xl hover:underline underline-offset-4 after:content-[''] after:absolute after:right-[-16px] after:h-full after:w-[3px] after:bg-black"
-        >
-          About Me
-        </Link>
-        <Link
-          href=""
-          className="relative text-[#B8B8B8] font-semibold text-4xl hover:underline underline-offset-4 after:content-[''] after:absolute after:right-[-16px] after:h-full after:w-[3px] after:bg-black"
-        >
-          Projects
-        </Link>
-        <Link
-          href=""
-          className="text-[#B8B8B8] font-semibold text-4xl hover:underline underline-offset-4"
-        >
-          기타
-        </Link>
-      </div>
+    <>
+      <Navigate />
       <div className="bg-green-200 text-center">
         <img
           src="/Frame1.svg"
@@ -44,6 +26,7 @@ export default function Home() {
             />
             <p className="text-2xl ml-[30px] font-light">(010) 0000-0000</p>
           </div>
+          {/* 이메일 클릭 시 이메일 보내기 링크로 전송 주가 예정 */}
           <div className="flex justify-center">
             <img
               src="/icons/Envelope.svg"
@@ -151,6 +134,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

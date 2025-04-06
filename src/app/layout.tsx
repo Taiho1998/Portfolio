@@ -13,7 +13,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>{children}</body>
+      <body className="antialiased">
+        <div className="bg-white min-h-[500px] mx-[60px] mt-[60px] mb-[120px] py-10 px-[55px]">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
