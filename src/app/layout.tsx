@@ -14,6 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        <script src="http://unpkg.com/tone"></script>
         <div className="bg-white min-h-[500px] mx-[60px] mt-[60px] mb-[120px] py-10 px-[55px]">
           {children}
         </div>

@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Navigate from "../components/Navigate";
+import Github from "../components/Github";
 
 export default function Home() {
   return (
@@ -9,13 +9,14 @@ export default function Home() {
         <img
           src="/Frame1.svg"
           alt="Profile_Img"
-          className="size-[300px] mx-auto rounded-full hover:shadow-2xl hover:-translate-1"
+          className="size-[300px] mx-auto rounded-full hover:-translate-1 transition-[transform, box-shadow] duration-300 hover:shadow-[8px_8px_20px_rgba(0,0,0,0.25)]"
         />
-        {/* 이미지 작업 목록 : 마우스 올릴 시 뜨는 스타일 애니메이션 효과 */}
         <h1 className="text-4xl font-bold mt-[15px]">
-          안녕하십니까,<span className="text-[#EE6533]">고태호</span>입니다!
+          안녕하십니까, 프론트엔드 개발자{" "}
+          <span className="text-[#EE6533]">고태호</span>입니다!
           <br />
-          Hello, my name is <span className="text-[#EE6533]">Taiho Koh</span>!
+          Hello, my name is <span className="text-[#EE6533]">Taiho Koh</span>, a
+          front-end developer!
         </h1>
         <div className="grid grid-cols-2 mx-[280px] mt-[90px]">
           <div className="flex justify-center">
@@ -59,7 +60,7 @@ export default function Home() {
                 className="self-baseline"
               />
               <p className="font-extralight text-2xl">
-                멋쟁이사자처럼, <br />
+                멋쟁이사자처럼 부트캠프, <br />
                 프론트엔드 스쿨 11기 수료, 2025
               </p>
             </div>
@@ -120,10 +121,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-wrap gap-3">
                   {/* 깃헙 이미지, 클릭 시 링크 이동 추가 예정 */}
-                  <img
-                    className="transition-transform duration-300 hover:scale-110"
-                    src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white"
-                  />
+                  <Github />
                   <img
                     className="transition-transform duration-300 hover:scale-110"
                     src="https://img.shields.io/badge/FIGMA-F24E1E?style=for-the-badge&logo=figma&logoColor=white"
