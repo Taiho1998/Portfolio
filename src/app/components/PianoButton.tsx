@@ -1,5 +1,4 @@
 "use client";
-import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import * as Tone from "tone";
 export default function PianoButton({

@@ -1,6 +1,4 @@
 import Navigate from "@/app/components/Navigate";
-import * as Tone from "tone";
-import PianoButton from "@/app/components/PianoButton";
 import Piano from "@/app/components/Piano";
 
 export default function extraPage() {
