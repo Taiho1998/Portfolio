@@ -1,6 +1,6 @@
 "use client";
 import { Fragment, JSX, useEffect, useState } from "react";
-import { description } from "../DescriptionData";
+import { description } from "./DescriptionData";
 
 interface descType {
   keyword: string;
