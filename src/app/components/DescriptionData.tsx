@@ -12,6 +12,7 @@ export const description: descType[] = [
       <ul className="font-light text-xl list-disc pl-5 break-keep">
         <li>농산물 직거래 오픈마켓 웹페이지.</li>
         <br />
+        <li>진행 기간: 24.12.19 - 25.01.22</li>
         <li>
           멋쟁이 사자처럼 프론트엔드 스쿨 11기 최종 프로젝트 결과물입니다.
         </li>
