@@ -1,5 +1,10 @@
 import Navigate from "@/app/components/Navigate";
 import Piano from "@/app/components/Piano";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "기타",
+};
 
 export default function extraPage() {
   return (
@@ -9,6 +14,8 @@ export default function extraPage() {
         <h3 className="font-semibold text-3xl">Piano</h3>
         <Piano />
       </div>
+      <br />
+      <br />
     </>
   );
 }

@@ -209,7 +209,7 @@ export const description: descType[] = [
             href="https://www.notion.so/4-4-3275fa56674041069f61c44806d2d11e?pvs=4"
             className="hover:scale-110"
           >
-            <div className="border w-fit p-3 inline-block group hover:bg-[#3F4448] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
+            <div className="border w-fit p-3 inline-block break-keep hover:bg-[#3F4448] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
               바로 가기
               <img
                 src="/icons/icons8-개념-150.png"

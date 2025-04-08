@@ -19,7 +19,11 @@ export default function ProjDescription() {
 
   return (
     <div className="mr-auto mt-[97px] w-full">
-      <div className="flex flex-wrap ">
+      <h2 className="font-extrabold text-4xl mb-[80px] break-keep">
+        농산물 직거래 플랫폼 웹 프로젝트,{" "}
+        <span className="text-[#72BF78]">바로Farm</span>
+      </h2>
+      <div className="flex flex-wrap">
         <div className="grow" onClick={() => setTag(0)}>
           <h2 className="font-bold text-2xl mx-auto w-fit cursor-pointer">
             프로젝트 소개

@@ -1,26 +1,66 @@
+"use client";
+import { useEffect, useRef, useState } from "react";
 import PianoButton from "./PianoButton";
+import * as Tone from "tone";
 
 export default function Piano() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const pianoRef = useRef<Tone.Sampler | null>(null);
+
+  useEffect(() => {
+    const vol = new Tone.Volume();
+    const piano = new Tone.Sampler({
+      urls: {
+        C4: "C4.mp3",
+        "D#4": "Ds4.mp3",
+        "F#4": "Fs4.mp3",
+        A4: "A4.mp3",
+      },
+      release: 1,
+      baseUrl: "https://tonejs.github.io/audio/salamander/",
+      onload: () => {
+        piano.chain(vol).toDestination();
+        pianoRef.current = piano;
+        setIsLoaded(true);
+      },
+    });
+  }, []);
+
+  if (!isLoaded) {
+    return (
+      <>
+        <div className="w-fit mx-auto mt-20 text-center">
+          <div className="loader"></div>
+        </div>
+        <p className="text-center mt-10">로딩 중입니다. 잠시만 기다려주세요!</p>
+      </>
+    );
+  }
+
   return (
     <>
-      <PianoButton scale={"A3"} note={"a"} />
-      <PianoButton scale={"A#3"} note={"w"} />
-      <PianoButton scale={"B3"} note={"s"} />
-      <PianoButton scale={"C4"} note={"d"} />
-      <PianoButton scale={"C#4"} note={"r"} />
-      <PianoButton scale={"D4"} note={"f"} />
-      <PianoButton scale={"D#4"} note={"t"} />
-      <PianoButton scale={"E4"} note={"g"} />
-      <PianoButton scale={"F4"} note={"h"} />
-      <PianoButton scale={"F#4"} note={"u"} />
-      <PianoButton scale={"G4"} note={"j"} />
-      <PianoButton scale={"G#4"} note={"i"} />
-      <PianoButton scale={"A4"} note={"k"} />
-      <PianoButton scale={"A#4"} note={"o"} />
-      <PianoButton scale={"B4"} note={"l"} />
-      <PianoButton scale={"C5"} note={";"} />
-      <PianoButton scale={"C#5"} note={"["} />
-      <PianoButton scale={"D5"} note={"'"} />
+      {[
+        ["A3", "a"],
+        ["A#3", "w"],
+        ["B3", "s"],
+        ["C4", "d"],
+        ["C#4", "r"],
+        ["D4", "f"],
+        ["D#4", "t"],
+        ["E4", "g"],
+        ["F4", "h"],
+        ["F#4", "u"],
+        ["G4", "j"],
+        ["G#4", "i"],
+        ["A4", "k"],
+        ["A#4", "o"],
+        ["B4", "l"],
+        ["C5", ";"],
+        ["C#5", "["],
+        ["D5", "'"],
+      ].map(([scale, note]) => (
+        <PianoButton key={note} scale={scale} note={note} pianoRef={pianoRef} />
+      ))}
     </>
   );
 }
