@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Navigate />
-      <div className="bg-green-200 text-center">
+      <div className="text-center">
         <img
           src="/Frame1.svg"
           alt="Profile_Img"
