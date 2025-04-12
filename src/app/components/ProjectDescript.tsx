@@ -51,9 +51,15 @@ export default function ProjDescription() {
         </div>
         <div className="grow" onClick={() => setTag(4)}>
           <h2 className="font-bold text-2xl mx-auto w-fit cursor-pointer">
-            외부 링크
+            기술 스택
           </h2>
           {tag === 4 && arrow}
+        </div>
+        <div className="grow" onClick={() => setTag(5)}>
+          <h2 className="font-bold text-2xl mx-auto w-fit cursor-pointer">
+            외부 링크
+          </h2>
+          {tag === 5 && arrow}
         </div>
       </div>
       <div

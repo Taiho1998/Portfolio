@@ -10,7 +10,7 @@ export default function projectPage() {
   return (
     <div>
       <Navigate />
-      <div className="flex w-full">
+      <div className="flex w-full flex-col-reverse items-center xl:flex-row">
         <ProjDescription />
         <img
           src="/ProjectImg.svg"

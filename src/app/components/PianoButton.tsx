@@ -17,13 +17,15 @@ export default function PianoButton({
     Tone.start();
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === note && isKeyPressed.current === false) {
+      if (e.key.toLowerCase() === note && isKeyPressed.current === false) {
         const piano = pianoRef.current;
         if (!piano) return;
 
-        document.getElementById(`${e.key}`)?.classList.add("bg-gray-700");
         document
-          .getElementById(`${e.key}`)
+          .getElementById(`${e.key.toLowerCase()}`)
+          ?.classList.add("bg-gray-700");
+        document
+          .getElementById(`${e.key.toLowerCase()}`)
           ?.classList.remove("hover:bg-gray-300");
         piano.triggerAttack(scale);
         isKeyPressed.current = true;
@@ -31,12 +33,16 @@ export default function PianoButton({
     };
 
     const handleKeyUp = (e: KeyboardEvent) => {
-      if (e.key === note && isKeyPressed.current === true) {
+      if (e.key.toLowerCase() === note && isKeyPressed.current === true) {
         const piano = pianoRef.current;
         if (!piano) return;
 
-        document.getElementById(`${e.key}`)?.classList.add("hover:bg-gray-300");
-        document.getElementById(`${e.key}`)?.classList.remove("bg-gray-700");
+        document
+          .getElementById(`${e.key.toLowerCase()}`)
+          ?.classList.add("hover:bg-gray-300");
+        document
+          .getElementById(`${e.key.toLowerCase()}`)
+          ?.classList.remove("bg-gray-700");
         piano.triggerRelease(scale);
         isKeyPressed.current = false;
       }

@@ -11,9 +11,8 @@ export default function extraPage() {
   return (
     <>
       <Navigate />
-      <div className="mt-[60px] w-fit mx-auto">
-        <h3 className="font-semibold text-3xl">저에 대해 더 알고 싶다면?</h3>
-        <h3 className="font-semibold text-3xl">Piano</h3>
+      <div className="mt-[60px] w-fit">
+        {/* <h3 className="font-semibold text-3xl">저에 대해 더 알고 싶다면?</h3> */}
         <Piano />
         {/* <Bass /> */}
       </div>
