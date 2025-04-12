@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 export default function Navigate() {
   const path = usePathname();
   return (
-    <div className="flex gap-7">
+    <div className="flex gap-7 justify-center xl:justify-start">
       <Link
         href="/"
         className={`relative ${
