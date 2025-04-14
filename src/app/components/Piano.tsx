@@ -63,7 +63,7 @@ export default function Piano() {
   }
 
   return (
-    <div className="gap-20 justify-baseline text-start hidden xl:flex">
+    <div className="gap-5 justify-baseline text-start hidden xl:flex xl:flex-col xl:text-center xl:items-center">
       <button
         onClick={() => {
           setIsShow(!isShow);

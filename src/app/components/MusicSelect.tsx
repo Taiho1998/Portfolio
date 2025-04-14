@@ -96,8 +96,8 @@ export const musicSelections: MusicData[] = [
     idValue: "50qu96dvhH8",
   },
 ];
-const today = new Date().toISOString().split("T")[0];
 
+const today = new Date().toISOString().split("T")[0];
 let scores: number;
 
 export default function MusicSelection() {
@@ -137,7 +137,7 @@ export default function MusicSelection() {
     <div id="MusicRecommend" className="mt-5 w-fit text-center mx-auto ">
       <button
         onClick={clickHandler}
-        className="cursor-pointer ml-3 border rounded-lg w-fit p-3 inline-block group hover:bg-[#EE6533] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all"
+        className="cursor-pointer border rounded-lg w-fit p-3 inline-block group hover:bg-[#EE6533] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all"
       >
         {buttonText}
       </button>
