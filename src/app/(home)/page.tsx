@@ -14,7 +14,7 @@ export default function Home() {
       <Navigate />
       <div className="text-center mt-5 xl:mt-0">
         <ProfileImg />
-        <h1 className="text-4xl font-bold mt-[15px] break-keep">
+        <h1 className="text-xl xl:text-4xl font-bold mt-[15px] break-keep">
           안녕하십니까, 프론트엔드 개발자{" "}
           <span className="text-[#EE6533] break-keep">고태호</span>입니다!
           <br />
@@ -24,11 +24,11 @@ export default function Home() {
         </h1>
 
         {/* 이메일 클릭 시 이메일 보내기 링크로 전송 주가 예정 */}
-        <h3 className="font-bold text-[32px] mb-5 hover:text-[#EE6533] mt-[40px]">
+        <h3 className="font-bold text-2xl xl:text-[32px] mb-5 hover:text-[#EE6533] mt-[40px]">
           Contact
         </h3>
         <div className="h-fit flex flex-col xl:flex-row gap-5 justify-center items-center">
-          <div className="flex h-fit">
+          <div className="flex h-fit items-center">
             <img
               src="/icons/Envelope.svg"
               alt="phone Icon Img"
@@ -36,9 +36,10 @@ export default function Home() {
             />
             <a
               href="mailto:tgo12323@gmail.com"
-              className="text-2xl ml-[30px] font-light h-fit"
+              title="클릭하여 이메일 보내기"
+              className="xl:text-2xl ml-[30px] font-light h-fit hover:underline"
             >
-              <span className="">tgo12323@gmail.com</span>
+              tgo12323@gmail.com
             </a>
           </div>
           <CopyTextButton copyText={"tgo12323@gmail.com"} />
