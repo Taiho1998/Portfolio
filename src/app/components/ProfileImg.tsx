@@ -12,7 +12,7 @@ export default function ProfileImg() {
         </div>
 
         {/* 뒷면 */}
-        <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-full flex flex-col justify-center items-center bg-gradient-to-br from-red-500 via-orange-500 to-yellow-300 hidden md:flex">
+        <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-full flex flex-col justify-center items-center bg-gradient-to-br from-red-500 via-orange-500 to-yellow-300 md:flex">
           <p className="text-white text-3xl font-bold">고태호</p>
           <p className="text-white text-xl font-bold">1998.05.20</p>
           <p className="text-white text-xl font-bold text-center px-4 break-words">
