@@ -261,7 +261,7 @@ export const description: descType[] = [
           Figma 주소:{" "}
           <a
             target="_blank"
-            href="https://www.notion.so/4-4-3275fa56674041069f61c44806d2d11e?pvs=4"
+            href="https://www.figma.com/design/ThTdy4bAI2dDMxaRcDPFAW/4%EB%94%B8%EB%9D%BC---%EB%B0%94%EB%A1%9C%ED%8C%9C(Farm)?node-id=0-1&p=f&t=O2YRQAev0xPoQLzn-0"
             className="hover:scale-110"
           >
             <div className="border w-fit p-3 inline-block group bg-[#fe2c54] text-[#F5F5F5] xl:bg-transparent xl:text-black hover:bg-[#fe2c54] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
