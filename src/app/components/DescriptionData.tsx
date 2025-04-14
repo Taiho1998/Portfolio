@@ -62,26 +62,22 @@ export const description: descType[] = [
         <li>
           프로필 및 커뮤니티
           <ul className="font-light list-disc pl-5 break-keep">
-            <br />
             <li>
               커뮤니티 기능
               <ul className="font-light list-disc pl-5 break-keep">
-                <br />
                 <li>
                   커뮤니티 기능의 전반적인 프론트엔드 기능을 담당했으며, 게시글
                   작성, 수정, 삭제를 구현했습니다.
                 </li>
-                <br />
+
                 <li>게시글의 댓글 작성 및 삭제 또한 구현했습니다.</li>
-                <br />
               </ul>
             </li>
+            <br />
             <li>
               프로필 기능
               <ul className="font-light list-disc pl-5 break-keep">
-                <br />
                 <li>유저의 기본적인 정보를 조회 및 수정할 수 있습니다.</li>{" "}
-                <br />
                 <li>
                   또한 유저가 판매하고 있는 상품의 정보도 필요시 수정할 수 있는
                   기능이 포함되어 있습니다.
@@ -94,7 +90,6 @@ export const description: descType[] = [
         <li>
           프로젝트 팀 리더
           <ul className="font-light list-disc pl-5 break-keep">
-            <br />
             <li>
               팀 리더로서 스크럼에서 팀의 의견을 전반적으로 조율하였으며,
               프로젝트 일정을 준수하여 제 시간에 스케쥴을 맞출 수 있게 했습니다.
@@ -182,101 +177,99 @@ export const description: descType[] = [
   {
     keyword: "link",
     content: (
-      <div className="font-light">
-        <div>
+      <div className="font-light text-lg w-full overflow-hidden">
+        <div className="flex flex-col items-center sm:flex-row">
           홈페이지 주소:{" "}
           <a
             target="_blank"
             href="https://barofarm.netlify.app/"
             className="hover:underline hover:underline-offset-4"
           >
-            <div className="border w-fit p-3 inline-block hover:bg-[#95d89a] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
+            <div className="border w-fit p-3 inline-block bg-[#95d89a] text-[#F5F5F5] xl:bg-transparent xl:text-black hover:bg-[#95d89a] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
               원본 버전
               <img
                 src="/BaroFarmLogo.png"
                 alt="BaroFarmLogo icon"
-                className="box-border h-[28px] inline ml-2"
+                className="box-border h-[28px] inline ml-2 rounded-md border border-white bg-white xl:border-0 xl:bg-transparent group-hover:border group-hover:border-white  group-hover:bg-white"
               />
             </div>
           </a>
           <a
             target="_blank"
             href="https://barofarm-refactoredtk.netlify.app/"
-            className="hover:underline hover:underline-offset-4 ml-3"
+            className="hover:underline hover:underline-offset-4 sm:ml-3"
           >
-            <div className="border w-fit p-3 inline-block hover:bg-[#95d89a] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
+            <div className="border w-fit p-3 inline-block  bg-[#95d89a] text-[#F5F5F5] xl:bg-transparent xl:text-black hover:bg-[#95d89a] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all whitespace-nowrap">
               리팩토링 버전
               <img
                 src="/BaroFarmLogo.png"
                 alt="BaroFarmLogo icon"
-                className="box-border h-[28px] inline ml-2"
+                className="box-border h-[28px] inline ml-2 rounded-md border border-white bg-white xl:border-0 xl:bg-transparent group-hover:border group-hover:border-white  group-hover:bg-white"
               />
             </div>
           </a>
-          <br />
         </div>
-        <div className="my-3">
+        <div className="sm:my-3 flex flex-col items-center sm:flex-row">
           Github 주소:{" "}
           <a
             target="_blank"
             href="https://github.com/FRONTENDBOOTCAMP-11th/baroFarm"
             className="hover:scale-110"
           >
-            <div className="border w-fit p-3 inline-block group hover:bg-[#2b3137] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
+            <div className="border w-fit p-3 inline-block group  bg-[#2b3137] text-[#F5F5F5] xl:bg-transparent xl:text-black hover:bg-[#2b3137] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
               원본 버전
               <img
                 src="/icons/github.png"
                 alt="github icon"
-                className="box-border h-[28px] inline ml-2 rounded-md group-hover:border group-hover:border-white  group-hover:bg-white"
+                className="box-border h-[28px] inline ml-2 rounded-md border border-white bg-white xl:border-0 xl:bg-transparent group-hover:border group-hover:border-white  group-hover:bg-white"
               />
             </div>
           </a>
           <a
             target="_blank"
             href="https://github.com/Taiho1998/baroFarm"
-            className="hover:underline hover:underline-offset-4 ml-3"
+            className="hover:underline hover:underline-offset-4 sm:ml-3"
           >
-            <div className="border w-fit p-3 inline-block group hover:bg-[#2b3137] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
+            <div className="border w-fit p-3 inline-block group bg-[#2b3137] text-[#F5F5F5] xl:bg-transparent xl:text-black hover:bg-[#2b3137] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
               리팩토링 버전
               <img
                 src="/icons/github.png"
                 alt="github icon"
-                className="box-border h-[28px] inline ml-2 rounded-md group-hover:border group-hover:border-white  group-hover:bg-white"
+                className="box-border h-[28px] inline ml-2 rounded-md  border border-white bg-white xl:border-0 xl:bg-transparent group-hover:border group-hover:border-white  group-hover:bg-white"
               />
             </div>
           </a>
-          <br />
         </div>
-        <div className="mb-3">
+        <div className="sm:mb-3 flex flex-col items-center sm:flex-row">
           노션 주소:{" "}
           <a
             target="_blank"
             href="https://www.notion.so/4-4-3275fa56674041069f61c44806d2d11e?pvs=4"
             className="hover:scale-110"
           >
-            <div className="border w-fit p-3 inline-block group hover:bg-[#3F4448] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
+            <div className="border w-fit p-3 inline-block group bg-[#3F4448] text-[#F5F5F5] xl:bg-transparent xl:text-black hover:bg-[#3F4448] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
               바로 가기
               <img
                 src="/icons/icons8-개념-150.png"
                 alt="Notion icon"
-                className="box-border h-[28px] inline ml-2 rounded-md group-hover:border group-hover:border-white  group-hover:bg-white"
+                className="box-border h-[28px] inline ml-2 rounded-md border border-white bg-white xl:border-0 xl:bg-transparent group-hover:border group-hover:border-white  group-hover:bg-white"
               />
             </div>
           </a>
         </div>
-        <div>
+        <div className="flex flex-col items-center sm:flex-row">
           Figma 주소:{" "}
           <a
             target="_blank"
             href="https://www.notion.so/4-4-3275fa56674041069f61c44806d2d11e?pvs=4"
             className="hover:scale-110"
           >
-            <div className="border w-fit p-3 inline-block group hover:bg-[#fe2c54] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
+            <div className="border w-fit p-3 inline-block group bg-[#fe2c54] text-[#F5F5F5] xl:bg-transparent xl:text-black hover:bg-[#fe2c54] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
               바로 가기
               <img
                 src="/icons/Figma.png"
                 alt="Notion icon"
-                className="box-border h-[28px] inline ml-2 rounded-md group-hover:border group-hover:border-white  group-hover:bg-white"
+                className="box-border h-[28px] inline ml-2 rounded-md border border-white bg-white xl:border-0 xl:bg-transparent group-hover:border group-hover:border-white  group-hover:bg-white"
               />
             </div>
           </a>

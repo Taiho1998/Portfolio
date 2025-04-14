@@ -13,15 +13,13 @@ export default function ProjDescription() {
   );
 
   return (
-    <div className="mr-auto mt-[20px] xl:mt-[97px] w-full">
-      <div className="shrink-0">
-        <h2 className="font-extrabold text-center xl:text-start text-4xl mb-[20px] xl:mb-[80px] break-keep">
-          농산물 직거래 플랫폼 웹 프로젝트,{" "}
-          <span className="text-[#72BF78]">바로Farm</span>
-        </h2>
-      </div>
+    <div className="mr-auto mt-[20px] xl:mt-10 w-full">
+      <h2 className="font-extrabold text-center xl:text-start text-4xl mb-[20px] xl:mb-[40px] break-keep">
+        농산물 직거래 플랫폼 웹 프로젝트,{" "}
+        <span className="text-[#72BF78]">바로Farm</span>
+      </h2>
 
-      <div className="flex flex-wrap gap-1 md:gap-0 min-h-">
+      <div className="flex flex-wrap gap-1 md:gap-0">
         <div className="grow" onClick={() => setTag(0)}>
           <h2 className="font-bold md:text-xl mx-auto w-fit cursor-pointer">
             프로젝트 소개

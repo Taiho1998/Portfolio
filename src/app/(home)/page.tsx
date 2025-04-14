@@ -50,22 +50,22 @@ export default function Home() {
               <h3 className="font-bold text-[32px] mb-5 hover:text-[#EE6533]">
                 Education
               </h3>
-              <div className="flex gap-5 mb-5">
+              <div className="flex flex-col xl:flex-row gap-5 mb-5">
                 <img
                   src="/icons/Bank.svg"
                   alt="College"
-                  className="self-baseline"
+                  className="self-center xl:self-baseline"
                 />
                 <p className="font-extralight text-2xl">
                   중앙대학교, 창의ICT공과대학
                   <br /> 컴퓨터공학부 소프트웨어전공 졸업, 2024
                 </p>
               </div>
-              <div className="flex gap-5 ">
+              <div className="flex flex-col gap-5 ">
                 <img
                   src="/icons/tent.svg"
                   alt="BootCamp"
-                  className="self-baseline"
+                  className="self-center xl:self-baseline"
                 />
                 <p className="font-extralight text-2xl">
                   멋쟁이사자처럼 부트캠프, <br />
