@@ -9,10 +9,11 @@ export const description: descType[] = [
   {
     keyword: "intro",
     content: (
-      <ul className="font-light text-xl list-disc pl-5 break-keep">
+      <ul className="font-light list-disc pl-5 break-keep">
         <li>농산물 직거래 오픈마켓 웹페이지.</li>
         <br />
         <li>진행 기간: 24.12.19 - 25.01.22</li>
+        <br />
         <li>
           멋쟁이 사자처럼 프론트엔드 스쿨 11기 최종 프로젝트 결과물입니다.
         </li>
@@ -35,7 +36,7 @@ export const description: descType[] = [
   {
     keyword: "purpose",
     content: (
-      <ul className="font-light text-xl list-disc pl-5 break-keep">
+      <ul className="font-light list-disc pl-5 break-keep">
         <li>
           농산물 유통 판매 사이트로써, 기존에 생산지에서 중간 유통을 거쳐
           소비자에게 도달하는 과정을 모바일 직거래 플랫폼으로 대체하여 유통
@@ -57,14 +58,14 @@ export const description: descType[] = [
   {
     keyword: "role",
     content: (
-      <ul className="font-light text-xl list-disc pl-5 break-keep">
+      <ul className="font-light list-disc pl-5 break-keep">
         <li>
           프로필 및 커뮤니티
-          <ul className="font-light text-xl list-disc pl-5 break-keep">
+          <ul className="font-light list-disc pl-5 break-keep">
             <br />
             <li>
               커뮤니티 기능
-              <ul className="font-light text-xl list-disc pl-5 break-keep">
+              <ul className="font-light list-disc pl-5 break-keep">
                 <br />
                 <li>
                   커뮤니티 기능의 전반적인 프론트엔드 기능을 담당했으며, 게시글
@@ -77,7 +78,7 @@ export const description: descType[] = [
             </li>
             <li>
               프로필 기능
-              <ul className="font-light text-xl list-disc pl-5 break-keep">
+              <ul className="font-light list-disc pl-5 break-keep">
                 <br />
                 <li>유저의 기본적인 정보를 조회 및 수정할 수 있습니다.</li>{" "}
                 <br />
@@ -92,7 +93,7 @@ export const description: descType[] = [
         </li>
         <li>
           프로젝트 팀 리더
-          <ul className="font-light text-xl list-disc pl-5 break-keep">
+          <ul className="font-light list-disc pl-5 break-keep">
             <br />
             <li>
               팀 리더로서 스크럼에서 팀의 의견을 전반적으로 조율하였으며,
@@ -107,7 +108,7 @@ export const description: descType[] = [
   {
     keyword: "feature",
     content: (
-      <ul className="font-light text-xl list-disc pl-5 break-keep">
+      <ul className="font-light list-disc pl-5 break-keep">
         <li>
           특징으로는 커뮤니티 기능을 추가하여 레시피를 공유하거나 판매자의
           바이럴 마켓팅과 같은 유저 간의 정보 공유가 원활이 이뤄지게 했습니다.
@@ -137,11 +138,51 @@ export const description: descType[] = [
       </ul>
     ),
   },
-  { keyword: "techStack", content: <>끼얏호우~</> },
+  {
+    keyword: "techStack",
+    content: (
+      <>
+        <div className="flex flex-wrap gap-3 justify-center">
+          <img
+            className="transition-transform duration-300 hover:scale-110"
+            src="https://img.shields.io/badge/JAVASCRIPT-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white"
+          />
+          <img
+            className="transition-transform duration-300 hover:scale-110"
+            src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+          />
+          <img
+            className="transition-transform duration-300 hover:scale-110"
+            src="https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css&logoColor=white"
+          />
+          <img
+            className="transition-transform duration-300 hover:scale-110"
+            src="https://img.shields.io/badge/TAILWINDCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"
+          />
+          <img
+            className="transition-transform duration-300 hover:scale-110"
+            src="https://img.shields.io/badge/REACT-61DAFB?style=for-the-badge&logo=react&logoColor=white"
+          />
+          <img
+            className="transition-transform duration-300 hover:scale-110"
+            src="https://img.shields.io/badge/TYPESCRIPT-3178C6?style=for-the-badge&logo=typescript&logoColor=white"
+          />
+          <img
+            className="transition-transform duration-300 hover:scale-110 cursor-pointer"
+            src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white"
+          />
+          <img
+            className="transition-transform duration-300 hover:scale-110"
+            src="https://img.shields.io/badge/FIGMA-F24E1E?style=for-the-badge&logo=figma&logoColor=white"
+          />
+        </div>
+      </>
+    ),
+  },
   {
     keyword: "link",
     content: (
-      <div className="font-light text-xl">
+      <div className="font-light">
         <div>
           홈페이지 주소:{" "}
           <a

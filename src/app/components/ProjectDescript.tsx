@@ -1,11 +1,6 @@
 "use client";
-import { Fragment, JSX, useEffect, useState } from "react";
+import { JSX, useState } from "react";
 import { description } from "./DescriptionData";
-
-interface descType {
-  keyword: string;
-  content: string;
-}
 
 export default function ProjDescription() {
   // tag의 초기 값은 intro = 프로젝트 소개
@@ -18,52 +13,55 @@ export default function ProjDescription() {
   );
 
   return (
-    <div className="mr-auto mt-[97px] w-full">
-      <h2 className="font-extrabold text-4xl mb-[80px] break-keep">
-        농산물 직거래 플랫폼 웹 프로젝트,{" "}
-        <span className="text-[#72BF78]">바로Farm</span>
-      </h2>
-      <div className="flex flex-wrap">
+    <div className="mr-auto mt-[20px] xl:mt-[97px] w-full">
+      <div className="shrink-0">
+        <h2 className="font-extrabold text-center xl:text-start text-4xl mb-[20px] xl:mb-[80px] break-keep">
+          농산물 직거래 플랫폼 웹 프로젝트,{" "}
+          <span className="text-[#72BF78]">바로Farm</span>
+        </h2>
+      </div>
+
+      <div className="flex flex-wrap gap-1 md:gap-0 min-h-">
         <div className="grow" onClick={() => setTag(0)}>
-          <h2 className="font-bold text-2xl mx-auto w-fit cursor-pointer">
+          <h2 className="font-bold md:text-xl mx-auto w-fit cursor-pointer">
             프로젝트 소개
           </h2>
           {tag === 0 && arrow}
         </div>
         <div className="grow" onClick={() => setTag(1)}>
-          <h2 className="font-bold text-2xl mx-auto w-fit cursor-pointer">
+          <h2 className="font-bold md:text-xl mx-auto w-fit cursor-pointer">
             목적
           </h2>
           {tag === 1 && arrow}
         </div>
 
         <div className="grow" onClick={() => setTag(2)}>
-          <h2 className="font-bold text-2xl mx-auto w-fit cursor-pointer">
+          <h2 className="font-bold md:text-xl mx-auto w-fit cursor-pointer">
             팀 내 역할
           </h2>
           {tag === 2 && arrow}
         </div>
         <div className="grow" onClick={() => setTag(3)}>
-          <h2 className="font-bold text-2xl mx-auto w-fit cursor-pointer">
+          <h2 className="font-bold md:text-xl mx-auto w-fit cursor-pointer">
             특징
           </h2>
           {tag === 3 && arrow}
         </div>
         <div className="grow" onClick={() => setTag(4)}>
-          <h2 className="font-bold text-2xl mx-auto w-fit cursor-pointer">
+          <h2 className="font-bold md:text-xl mx-auto w-fit cursor-pointer">
             기술 스택
           </h2>
           {tag === 4 && arrow}
         </div>
         <div className="grow" onClick={() => setTag(5)}>
-          <h2 className="font-bold text-2xl mx-auto w-fit cursor-pointer">
+          <h2 className="font-bold md:text-xl mx-auto w-fit cursor-pointer">
             외부 링크
           </h2>
           {tag === 5 && arrow}
         </div>
       </div>
       <div
-        className="w-full p-5 mb-auto border-4 border-[#B8B8B8] bg-[#f0f0f0]"
+        className="w-full p-5 mb-auto border-4 text-sm xl:text-lg border-[#B8B8B8] bg-[#f0f0f0]"
         id="decriptionArea"
       >
         {description[tag].content}

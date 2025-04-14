@@ -8,14 +8,14 @@ export const metadata: Metadata = {
 
 export default function projectPage() {
   return (
-    <div>
+    <div className="min-h-[1490px] ">
       <Navigate />
       <div className="flex w-full flex-col-reverse items-center xl:flex-row">
         <ProjDescription />
         <img
           src="/ProjectImg.svg"
           alt="baroFarm Introduce Img"
-          className="w-[500px] h-[800px] aspect-5/8 ml-[60px]"
+          className="aspect-5/8  xl:ml-[60px] mt-5 xl:mt-0"
         />
       </div>
     </div>
