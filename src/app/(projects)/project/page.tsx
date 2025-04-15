@@ -1,4 +1,4 @@
-import Carousel from "@/app/components/Carousel";
+import Carousel from "../../components/Carousel";
 import Navigate from "@/app/components/Navigate";
 import ProjDescription from "@/app/components/ProjectDescript";
 import { Metadata } from "next";
