@@ -1,14 +1,14 @@
-"use client";
+// "use client";
 
-import { A11y, Autoplay, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
+// import { A11y, Autoplay, Pagination } from "swiper/modules";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/css";
+// import "swiper/css/pagination";
 
-interface data {
-  img: string;
-  url: string;
-}
+// interface data {
+//   img: string;
+//   url: string;
+// }
 
 export default function Carousel() {
   // const data: data[] = [
