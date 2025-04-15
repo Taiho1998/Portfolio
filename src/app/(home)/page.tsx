@@ -61,7 +61,7 @@ export default function Home() {
                   <br /> 컴퓨터공학부 소프트웨어전공 졸업, 2024
                 </p>
               </div>
-              <div className="flex flex-col gap-5 ">
+              <div className="flex flex-col gap-5 xl:flex-row">
                 <img
                   src="/icons/tent.svg"
                   alt="BootCamp"

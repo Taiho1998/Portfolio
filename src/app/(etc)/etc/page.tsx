@@ -12,7 +12,7 @@ export default function extraPage() {
   return (
     <>
       <Navigate />
-      <div className="mt-[60px] min-w-[586px] overflow-hidden">
+      <div className="mt-[60px] overflow-hidden">
         {/* <h3 className="font-semibold text-3xl">저에 대해 더 알고 싶다면?</h3> */}
         <Piano />
         <MusicSelection />

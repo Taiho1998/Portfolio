@@ -134,7 +134,10 @@ export default function MusicSelection() {
     setButtonText(isShow ? "오늘의 추천 음악 열기" : "닫기");
   };
   return (
-    <div id="MusicRecommend" className="mt-5 w-fit text-center mx-auto ">
+    <div
+      id="MusicRecommend"
+      className="mt-5 w-fit text-center mx-auto object-cover"
+    >
       <button
         onClick={clickHandler}
         className="cursor-pointer border rounded-lg w-fit p-3 inline-block group hover:bg-[#EE6533] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all"
