@@ -18,7 +18,7 @@ export default function projectPage() {
           alt="baroFarm Introduce Img"
           className="hidden xl:block xl:aspect-5/8 w-[150px] h-[240px] xl: xl:w-[500px] xl:h-[800px] self-center xl:ml-[60px] mt-5 xl:mt-0"
         />
-        <div className="xl:hidden w-full mt-5">
+        <div className="xl:hidden mt-5 bg-[#72BF78] w-full mx-auto rounded-xl border-2 border-green-600">
           <Carousel />
         </div>
       </div>

@@ -34,7 +34,7 @@ export default function Carousel() {
   return (
     <section
       style={{ height: `300px` }}
-      className="flex text-center mb-[10px] relative w-full"
+      className="flex relative w-full my-[5px]"
     >
       <Swiper
         style={{ height: "300px" }}
