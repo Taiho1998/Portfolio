@@ -1,6 +1,6 @@
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import { JWT } from "google-auth-library";
-import credential from "../../../../key.json";
+import credential from "C:/Users/millk/Downloads/newKey.json";
 import { NextResponse } from "next/server";
 
 interface MusicData {
@@ -19,7 +19,7 @@ class Music implements MusicData {
   }
 }
 
-async function loadGoogleDoc() {
+export async function loadGoogleDoc() {
   try {
     const Auth = new JWT({
       key: credential.private_key,
@@ -27,7 +27,11 @@ async function loadGoogleDoc() {
       scopes: ["https://www.googleapis.com/auth/spreadsheets"],
     });
     // Google Doc의 SheetId를 입력해주세요.
-    const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID || "", Auth);
+    const doc = new GoogleSpreadsheet(
+      "1zj8Vj5CTEGImXBUvpVxjouZ1bRoyT4FXlQAsUmrJbaw",
+      Auth
+    );
+    console.log(doc);
     await doc.loadInfo();
     return doc;
   } catch (error) {
@@ -36,14 +40,15 @@ async function loadGoogleDoc() {
 }
 
 // 공통 : 해당하는 행(Row) 불러오기
-async function findRows() {
+export async function findRows() {
   try {
     const doc = await loadGoogleDoc(); // 문서 불러오기
-    const sheet = doc!.sheetsByTitle["music_selection"]; // 문서에서 시트 이름에 해당하는 시트 선택하기
-    await sheet.loadHeaderRow(1); // 헤더에 해당하는 INDEX 번호를 설정함
-    const rows = await sheet.getRows(); // 해당 시트의 모든 rows를 불러옴
-    const rowsLength = rows.length; // 총 Rows의 개수
-    return { rowsLength, rows }; // 총 Rows 수, 현재 row의 Index 값, 현재 Sheet의 값을 전달함
+    if (!doc) throw new Error("몬가 문제가 생겼으니 해결하셈....");
+    const sheet = doc.sheetsByTitle["music_selection"];
+    await sheet.loadHeaderRow(1);
+    const rows = await sheet.getRows();
+    const rowsLength = rows.length;
+    return { rowsLength, rows };
   } catch (error) {
     console.error("Sheet find row Error:", error);
     throw new Error("Failed to find Row data.");
