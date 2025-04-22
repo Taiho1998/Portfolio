@@ -36,24 +36,23 @@ async function loadGoogleDoc() {
 }
 
 // 공통 : 해당하는 행(Row) 불러오기
-export async function findRows(id: string) {
+export async function findRows() {
   try {
     const doc = await loadGoogleDoc(); // 문서 불러오기
     const sheet = doc!.sheetsByTitle["music_selection"]; // 문서에서 시트 이름에 해당하는 시트 선택하기
     await sheet.loadHeaderRow(1); // 헤더에 해당하는 INDEX 번호를 설정함
     const rows = await sheet.getRows(); // 해당 시트의 모든 rows를 불러옴
     const rowsLength = rows.length; // 총 Rows의 개수
-    const rowNumber = id;
-    return { rowsLength, rowNumber, rows }; // 총 Rows 수, 현재 row의 Index 값, 현재 Sheet의 값을 전달함
+    return { rowsLength, rows }; // 총 Rows 수, 현재 row의 Index 값, 현재 Sheet의 값을 전달함
   } catch (error) {
     console.error("Sheet find row Error:", error);
     throw new Error("Failed to find Row data.");
   }
 }
 
-export async function GET(id: string) {
+export async function GET() {
   try {
-    const { rowsLength, rowNumber, rows } = await findRows(id);
+    const { rowsLength, rows } = await findRows();
     const data = [];
     for (let i = 0; i < rowsLength; i++) {
       data.push(

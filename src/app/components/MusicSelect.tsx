@@ -133,27 +133,29 @@ export default function MusicSelection() {
   const clickHandler = async () => {
     setIsShow(!isShow);
     setButtonText(isShow ? "오늘의 추천 음악 열기" : "닫기");
-    try {
-      const res = await fetch("/api/useGoogleSheets", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+    if (!isLoaded) {
+      try {
+        const res = await fetch("/api/useGoogleSheets", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
 
-      if (!res.ok) throw new Error("API 호출 실패");
+        if (!res.ok) throw new Error("API 호출 실패");
 
-      const list = await res.json();
-      const rng = seedrandom(today);
-      scores = Math.floor(rng() * list.rowsLength);
-      setTitle(list.data[scores].title);
-      setAuthor(list.data[scores].author);
-      setId(list.data[scores].idValue);
-      setIsLoaded(true);
-      return list;
-    } catch (error) {
-      console.error("Client fetch error:", error);
-      throw new Error("몬가 문제가 생겨벌임....");
+        const list = await res.json();
+        const rng = seedrandom(today);
+        scores = Math.floor(rng() * list.rowsLength);
+        setTitle(list.data[scores].title);
+        setAuthor(list.data[scores].author);
+        setId(list.data[scores].idValue);
+        setIsLoaded(true);
+        return list;
+      } catch (error) {
+        console.error("Client fetch error:", error);
+        throw new Error("몬가 문제가 생겨벌임....");
+      }
     }
   };
 
