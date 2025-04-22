@@ -1,49 +1,12 @@
 "use client";
 import seedrandom from "seedrandom";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useState } from "react";
 
 interface MusicData {
   title: string;
   author: string;
   idValue: string;
 }
-
-class Music implements MusicData {
-  title: string;
-  author: string;
-  idValue: string;
-  constructor(title: string, author: string, idValue: string) {
-    this.title = title;
-    this.author = author;
-    this.idValue = idValue;
-  }
-}
-
-const musicSelections = [
-  new Music(
-    "Just the Two of Us",
-    "Bill Grover Washington, Jr. · Bill Withers",
-    "6POZlJAZsok"
-  ),
-  new Music("Lovely Day", "Bill Withers", "bEeaS6fuUoA"),
-  new Music("Disco Yes (feat. Poppy Ajudha)", "Tom Misch", "EXWOJvlDwbU"),
-  new Music("Lost In Paris (feat. GoldLink)", "Tom Misch", "QBL2m1PNqJM"),
-  new Music("Movie", "Tom Misch ", "hwKZxdhu95E"),
-  new Music(
-    "【鏡音リン】10年後の月光ステージ【セルフカバー】",
-    "GYARI",
-    "6gIXh0-e2R0"
-  ),
-  new Music("Capella", "Meine Meinung", "wabps4ruZ5w"),
-  new Music("ニライカナイ", "Meine Meinung", "sONoBSu6DJs"),
-  new Music("What's Going On", "Marvin Gaye", "ApthDWoPMFQ"),
-  new Music("Still A Friend Of Mine", "Incognito", "Wt2sWPIsKOY"),
-  new Music("Ain't No Mountain High Enough", "Marvin Gaye", "ABfQuZqq8wg"),
-  new Music("Got to Be Real", "Cheryl Lynn", "GLUCCewe_4c"),
-  new Music("Machi No Dorufin", "Hamada Kingo", "VDuDQNkSC6g"),
-  new Music("SHYNESS BOY", "ANRI", "50qu96dvhH8"),
-];
 
 //  const musicSelections: MusicData[] = [
 //   {
@@ -136,9 +99,12 @@ const today = new Date().toISOString().split("T")[0];
 let scores: number;
 
 export default function MusicSelection() {
-  console.log(musicSelections[0]);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [isShow, setIsShow] = useState(false);
   const [buttonText, setButtonText] = useState("오늘의 추천 음악은?");
+  const [title, setTitle] = useState("");
+  const [author, setAuthor] = useState("");
+  const [id, setId] = useState("");
   //   const [scores, setScores] = useState<number | null>(null);
 
   //   //dailyMusicScore 초기화 및 date 체크 후 날이 바뀌었으면 value 값을 변경
@@ -162,25 +128,46 @@ export default function MusicSelection() {
   //     setScores(newScore);
   //   }, []);
 
-  const url =
-    "https://script.google.com/macros/s/AKfycbyWDqwr1SyFvjE07fAtATOsXLmrdoD91NzDDmiHk8DqCEHmFj2cT2EiGIw7VMx4xb8i/exec";
+  // const {data} = useQuery
 
-  const getMusicData = async () => {
+  const clickHandler = async () => {
+    setIsShow(!isShow);
+    setButtonText(isShow ? "오늘의 추천 음악 열기" : "닫기");
     try {
-      const { data } = await axios.get(url);
-      console.log(data);
-    } catch (err) {
-      console.error(err);
+      const res = await fetch("/api/useGoogleSheets", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!res.ok) throw new Error("API 호출 실패");
+
+      const list = await res.json();
+      const rng = seedrandom(today);
+      scores = Math.floor(rng() * list.rowsLength);
+      setTitle(list.data[scores].title);
+      setAuthor(list.data[scores].author);
+      setId(list.data[scores].idValue);
+      setIsLoaded(true);
+      return list;
+    } catch (error) {
+      console.error("Client fetch error:", error);
+      throw new Error("몬가 문제가 생겨벌임....");
     }
   };
 
-  const rng = seedrandom(today);
-  scores = Math.floor(rng() * musicSelections.length);
+  if (!isLoaded && isShow) {
+    return (
+      <>
+        <div className="w-fit mx-auto mt-20 text-center">
+          <div className="loader"></div>
+        </div>
+        <p className="text-center mt-10">로딩 중입니다. 잠시만 기다려주세요!</p>
+      </>
+    );
+  }
 
-  const clickHandler = () => {
-    setIsShow(!isShow);
-    setButtonText(isShow ? "오늘의 추천 음악 열기" : "닫기");
-  };
   return (
     <div
       id="MusicRecommend"
@@ -197,19 +184,16 @@ export default function MusicSelection() {
           <h3 className="font-semibold text-3xl">오늘의 추천 음악</h3>
           <a
             target="__blank"
-            href={`https://www.youtube.com/watch?v=${musicSelections[scores].idValue}`}
+            href={`https://www.youtube.com/watch?v=${id}`}
             className="block w-fit text-center"
           >
             <img
-              src={`https://img.youtube.com/vi/${musicSelections[scores].idValue}/0.jpg`}
-              alt={`${musicSelections[scores].title}`}
+              src={`https://img.youtube.com/vi/${id}/0.jpg`}
+              alt={`${title}`}
             />
-            <h4>{musicSelections[scores].title}</h4>
-            <p>{musicSelections[scores].author}</p>
+            <h4>{title}</h4>
+            <p>{author}</p>
           </a>
-          <button onClick={getMusicData} className="cursor-pointer border">
-            테스트
-          </button>
         </>
       )}
     </div>

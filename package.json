@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/google-spreadsheet": "^3.3.2",
     "axios": "^1.8.4",
     "dotenv": "^16.5.0",
+    "google-auth-library": "^9.15.1",
+    "google-spreadsheet": "^4.1.4",
     "next": "15.2.4",
     "openai": "^4.94.0",
     "react": "^19.0.0",
