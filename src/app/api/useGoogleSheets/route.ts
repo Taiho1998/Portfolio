@@ -36,7 +36,7 @@ async function loadGoogleDoc() {
 }
 
 // 공통 : 해당하는 행(Row) 불러오기
-export async function findRows() {
+async function findRows() {
   try {
     const doc = await loadGoogleDoc(); // 문서 불러오기
     const sheet = doc!.sheetsByTitle["music_selection"]; // 문서에서 시트 이름에 해당하는 시트 선택하기
