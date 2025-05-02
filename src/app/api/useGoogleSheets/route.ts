@@ -31,7 +31,6 @@ async function loadGoogleDoc() {
       "1zj8Vj5CTEGImXBUvpVxjouZ1bRoyT4FXlQAsUmrJbaw",
       Auth
     );
-    console.log(doc);
     await doc.loadInfo();
     return doc;
   } catch (error) {

@@ -14,11 +14,14 @@ export default function ProjDescription() {
 
   return (
     <div className="mr-auto mt-[20px] xl:mt-10 w-full">
+      <div className="flex gap-7 justify-center xl:justify-start overflow-x-clip min-w-[246px] mb-[10px]">
+        <span className="text-[#72BF78]">바로Farm</span>
+        <span className="text-[#72BF78]">바로Farm Refactored</span>
+      </div>
       <h2 className="font-extrabold text-center xl:text-start text-4xl mb-[20px] xl:mb-[40px] break-keep">
         농산물 직거래 플랫폼 웹 프로젝트,{" "}
         <span className="text-[#72BF78]">바로Farm</span>
       </h2>
-
       <div className="flex flex-wrap gap-1 md:gap-0">
         <div className="grow" onClick={() => setTag(0)}>
           <h2 className="font-bold md:text-xl mx-auto w-fit cursor-pointer">

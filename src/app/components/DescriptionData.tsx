@@ -45,13 +45,15 @@ export const description: descType[] = [
         </li>
         <br />
         <li>
+          프론트엔드 웹 개발 프로젝트를 기획 단계에서부터 디자인, 개발, 테스트,
+          DB구축, 마무리로 배포까지 경험하기 위한 팀프로젝트입니다
+        </li>
+        <br />
+        <li>
           또한 제공받은 백엔드 API와 DB를 기반으로 기초적인 React 스킬을 복습 및
           활용을 목적으로 두었습니다.
         </li>
         <br />
-        <li>
-          이후 Typescript를 학습하기 위한 목적으로 Typescript로 전환하였습니다.
-        </li>
       </ul>
     ),
   },
@@ -63,24 +65,47 @@ export const description: descType[] = [
           프로필 및 커뮤니티
           <ul className="font-light list-disc pl-5 break-keep">
             <li>
-              커뮤니티 기능
-              <ul className="font-light list-disc pl-5 break-keep">
+              바로파밍 페이지 - 커뮤니티 기능
+              <ul className="font-light list-disc pl-5 break-keep hidden">
                 <li>
-                  커뮤니티 기능의 전반적인 프론트엔드 기능을 담당했으며, 게시글
-                  작성, 수정, 삭제를 구현했습니다.
+                  게시글 조회, 작성, 수정, 삭제 - Axios 통신을 활용하여 호출한
+                  멋쟁이사자처럼 강사진이 제공한 백엔드 서버의 /posts의 Get,
+                  Post, Patch, Delete를 이용해 게시글 조회, 작성, 수정, 삭제를
+                  구현
                 </li>
-
-                <li>게시글의 댓글 작성 및 삭제 또한 구현했습니다.</li>
+                <li>
+                  댓글 조회, 삭제 - 게시글의 댓글 작성 및 삭제 또한 같은 url에
+                  있는 replies 기능을 활용하여 구현했습니다.
+                </li>
+                <li>
+                  게시물 목록에 조회되는 게시글 갯수 제한 - 게시글 목록을 조회시
+                  Pagination을 구현하여 한 페이지에 10개까지의 게시물을 표시하게
+                  하여 페이지 로딩 시간을 줄이고 보시하는 정보량에 제한을 두어
+                  사용자 경험을 개선했습니다.
+                </li>
+                <li>
+                  사진 미첨부 게시물의 분류 - 사진을 첨부하지 않은 게시물의 경우
+                  noPic 타입으로 설정하여 메인화면에 표시되지 않게 했습니다.
+                </li>
               </ul>
             </li>
-            <br />
             <li>
-              프로필 기능
-              <ul className="font-light list-disc pl-5 break-keep">
-                <li>유저의 기본적인 정보를 조회 및 수정할 수 있습니다.</li>{" "}
+              마이 페이지 - 프로필 기능
+              <ul className="font-light list-disc pl-5 break-keep hidden">
                 <li>
-                  또한 유저가 판매하고 있는 상품의 정보도 필요시 수정할 수 있는
-                  기능이 포함되어 있습니다.
+                  유저 정보 조회 및 수정 - Axios 통신을 활용하여 호출한
+                  멋쟁이사자처럼 강사진이 제공한 백엔드 서버의 /users의 Get,
+                  Post를 이용해 유저 정보의 조회, 수정을 구현
+                </li>
+                <li>
+                  프로필 수정 예외 처리 - 이 중 주소, 전화번호, 이름을 전부
+                  작성하거나 전부 비워두지 않은 경우 프로필 수정이 이뤄지지 않게
+                  함. 이는 주문 기능에서 사용하는 유저 정보이기 때문입니다.
+                </li>
+                <li>
+                  판매 상품 등록 및 조회 기능 - /products의 Get, Post, Patch
+                  요청으로 판매자 유저가 판매하고 싶은 상품을 등록할 수 있는
+                  기능
                 </li>
                 <br />
               </ul>
@@ -89,12 +114,14 @@ export const description: descType[] = [
         </li>
         <li>
           프로젝트 팀 리더
-          <ul className="font-light list-disc pl-5 break-keep">
+          <ul className="font-light list-disc pl-5 break-keep hidden">
+            <li>정기적인 스크럼 진행 및 의견 조율.</li>
             <li>
-              팀 리더로서 스크럼에서 팀의 의견을 전반적으로 조율하였으며,
-              프로젝트 일정을 준수하여 제 시간에 스케쥴을 맞출 수 있게 했습니다.
-              <br />
+              스케쥴을 지정하고 관리하여 마일스톤 일정 내에 정해진 작업을 마칠
+              수 있도록 함
             </li>
+            <li>Github 레포지터리의 전체적인 프로젝트 세팅 및 브랜치 관리</li>
+            <li>Netlify를 통한 프로젝틍의 배포를 담당</li>
           </ul>
         </li>
       </ul>
@@ -158,10 +185,7 @@ export const description: descType[] = [
             className="transition-transform duration-300 hover:scale-110"
             src="https://img.shields.io/badge/REACT-61DAFB?style=for-the-badge&logo=react&logoColor=white"
           />
-          <img
-            className="transition-transform duration-300 hover:scale-110"
-            src="https://img.shields.io/badge/TYPESCRIPT-3178C6?style=for-the-badge&logo=typescript&logoColor=white"
-          />
+
           <img
             className="transition-transform duration-300 hover:scale-110 cursor-pointer"
             src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white"
@@ -183,24 +207,10 @@ export const description: descType[] = [
           <a
             target="_blank"
             href="https://barofarm.netlify.app/"
-            className="hover:underline hover:underline-offset-4"
+            className="hover:underline hover:underline-offset-4 ml-[20px]"
           >
             <div className="border w-fit p-3 inline-block bg-[#95d89a] text-[#F5F5F5] xl:bg-transparent xl:text-black hover:bg-[#95d89a] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
-              원본 버전
-              <img
-                src="/BaroFarmLogo.png"
-                alt="BaroFarmLogo icon"
-                className="box-border h-[28px] inline ml-2 rounded-md border border-white bg-white xl:border-0 xl:bg-transparent group-hover:border group-hover:border-white  group-hover:bg-white"
-              />
-            </div>
-          </a>
-          <a
-            target="_blank"
-            href="https://barofarm-refactoredtk.netlify.app/"
-            className="hover:underline hover:underline-offset-4 sm:ml-3"
-          >
-            <div className="border w-fit p-3 inline-block  bg-[#95d89a] text-[#F5F5F5] xl:bg-transparent xl:text-black hover:bg-[#95d89a] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all whitespace-nowrap">
-              리팩토링 버전
+              바로가기
               <img
                 src="/BaroFarmLogo.png"
                 alt="BaroFarmLogo icon"
@@ -214,28 +224,14 @@ export const description: descType[] = [
           <a
             target="_blank"
             href="https://github.com/FRONTENDBOOTCAMP-11th/baroFarm"
-            className="hover:scale-110"
+            className="hover:scale-110 ml-[20px]"
           >
             <div className="border w-fit p-3 inline-block group  bg-[#2b3137] text-[#F5F5F5] xl:bg-transparent xl:text-black hover:bg-[#2b3137] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
-              원본 버전
+              바로가기
               <img
                 src="/icons/github.png"
                 alt="github icon"
                 className="box-border h-[28px] inline ml-2 rounded-md border border-white bg-white xl:border-0 xl:bg-transparent group-hover:border group-hover:border-white  group-hover:bg-white"
-              />
-            </div>
-          </a>
-          <a
-            target="_blank"
-            href="https://github.com/Taiho1998/baroFarm"
-            className="hover:underline hover:underline-offset-4 sm:ml-3"
-          >
-            <div className="border w-fit p-3 inline-block group bg-[#2b3137] text-[#F5F5F5] xl:bg-transparent xl:text-black hover:bg-[#2b3137] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
-              리팩토링 버전
-              <img
-                src="/icons/github.png"
-                alt="github icon"
-                className="box-border h-[28px] inline ml-2 rounded-md  border border-white bg-white xl:border-0 xl:bg-transparent group-hover:border group-hover:border-white  group-hover:bg-white"
               />
             </div>
           </a>
@@ -245,10 +241,10 @@ export const description: descType[] = [
           <a
             target="_blank"
             href="https://www.notion.so/4-4-3275fa56674041069f61c44806d2d11e?pvs=4"
-            className="hover:scale-110"
+            className="hover:scale-110 ml-[20px]"
           >
             <div className="border w-fit p-3 inline-block group bg-[#3F4448] text-[#F5F5F5] xl:bg-transparent xl:text-black hover:bg-[#3F4448] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
-              바로 가기
+              바로가기
               <img
                 src="/icons/icons8-개념-150.png"
                 alt="Notion icon"
@@ -262,10 +258,10 @@ export const description: descType[] = [
           <a
             target="_blank"
             href="https://www.figma.com/design/ThTdy4bAI2dDMxaRcDPFAW/4%EB%94%B8%EB%9D%BC---%EB%B0%94%EB%A1%9C%ED%8C%9C(Farm)?node-id=0-1&p=f&t=O2YRQAev0xPoQLzn-0"
-            className="hover:scale-110"
+            className="hover:scale-110 ml-[20px]"
           >
             <div className="border w-fit p-3 inline-block group bg-[#fe2c54] text-[#F5F5F5] xl:bg-transparent xl:text-black hover:bg-[#fe2c54] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
-              바로 가기
+              바로가기
               <img
                 src="/icons/Figma.png"
                 alt="Notion icon"
