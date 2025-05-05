@@ -5,6 +5,7 @@ import { description } from "./DescriptionData";
 export default function ProjDescription() {
   // tag의 초기 값은 intro = 프로젝트 소개
   const [tag, setTag] = useState<number>(0);
+  const [project, setProject] = useState<number>(0);
 
   // 반복되는 태그 줄이는 용도
   // 이후 애니메이션 효과 추가 예정
@@ -15,8 +16,24 @@ export default function ProjDescription() {
   return (
     <div className="mr-auto mt-[20px] xl:mt-10 w-full">
       <div className="flex gap-7 justify-center xl:justify-start overflow-x-clip min-w-[246px] mb-[10px]">
-        <span className="text-[#72BF78]">바로Farm</span>
-        <span className="text-[#72BF78]">바로Farm Refactored</span>
+        <span
+          onClick={() => {
+            setProject(0);
+            console.log(project);
+          }}
+          className="text-[#72BF78] hover:underline cursor-pointer"
+        >
+          바로Farm
+        </span>
+        <span
+          onClick={() => {
+            setProject(1);
+            console.log(project);
+          }}
+          className="text-[#72BF78] hover:underline cursor-pointer"
+        >
+          바로Farm Refactored
+        </span>
       </div>
       <h2 className="font-extrabold text-center xl:text-start text-4xl mb-[20px] xl:mb-[40px] break-keep">
         농산물 직거래 플랫폼 웹 프로젝트,{" "}

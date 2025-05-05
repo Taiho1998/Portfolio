@@ -25,11 +25,6 @@ export const description: descType[] = [
           매니저)로부터 제공받았으며, 기본적인 오픈마켓 API를 활용하여 기본에
           충실한 웹사이트를 제작했습니다.
         </li>
-        <br />
-        <li>
-          부트 캠프 종료 이후 깃헙 개인 레포지터리에서 개인 프로젝트를
-          진행했습니다.
-        </li>
       </ul>
     ),
   },
@@ -64,12 +59,9 @@ export const description: descType[] = [
         <li>
           프로필 및 커뮤니티
           <ul className="font-light list-disc pl-5 break-keep">
-            <li onClick={() => clickHandler("comm")}>
+            <li>
               바로파밍 페이지 - 커뮤니티 기능
-              <ul
-                id="comm"
-                className="font-light list-disc pl-5 break-keep hidden"
-              >
+              <ul id="comm" className="font-light list-disc pl-5 break-keep">
                 <li>
                   게시글 조회, 작성, 수정, 삭제 - Axios 통신을 활용하여 호출한
                   멋쟁이사자처럼 강사진이 제공한 백엔드 서버의 /posts의 Get,
@@ -92,12 +84,9 @@ export const description: descType[] = [
                 </li>
               </ul>
             </li>
-            <li onClick={() => clickHandler("MyPage")}>
+            <li>
               마이 페이지 - 프로필 기능
-              <ul
-                id="MyPage"
-                className="font-light list-disc pl-5 break-keep hidden"
-              >
+              <ul id="MyPage" className="font-light list-disc pl-5 break-keep ">
                 <li>
                   유저 정보 조회 및 수정 - Axios 통신을 활용하여 호출한
                   멋쟁이사자처럼 강사진이 제공한 백엔드 서버의 /users의 Get,
@@ -118,12 +107,9 @@ export const description: descType[] = [
             </li>
           </ul>
         </li>
-        <li onClick={() => clickHandler("Leader")}>
+        <li>
           프로젝트 팀 리더
-          <ul
-            id="Leader"
-            className="font-light list-disc pl-5 break-keep hidden"
-          >
+          <ul id="Leader" className="font-light list-disc pl-5 break-keep ">
             <li>정기적인 스크럼 진행 및 의견 조율.</li>
             <li>
               스케쥴을 지정하고 관리하여 마일스톤 일정 내에 정해진 작업을 마칠
@@ -173,7 +159,8 @@ export const description: descType[] = [
     keyword: "techStack",
     content: (
       <>
-        <div className="flex flex-wrap gap-3 justify-center">
+        <div className="flex flex-wrap gap-3 justify-start mb-3">
+          <div>기본적인 프론트엔드 기술 : </div>
           <img
             className="transition-transform duration-300 hover:scale-110"
             src="https://img.shields.io/badge/JAVASCRIPT-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white"
@@ -186,22 +173,31 @@ export const description: descType[] = [
             className="transition-transform duration-300 hover:scale-110"
             src="https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css&logoColor=white"
           />
-          <img
-            className="transition-transform duration-300 hover:scale-110"
-            src="https://img.shields.io/badge/TAILWINDCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"
-          />
+        </div>
+        <div className="flex flex-wrap gap-3 justify-start mb-3">
+          <div>외부 라이브러리 : </div>
           <img
             className="transition-transform duration-300 hover:scale-110"
             src="https://img.shields.io/badge/REACT-61DAFB?style=for-the-badge&logo=react&logoColor=white"
           />
-
           <img
-            className="transition-transform duration-300 hover:scale-110 cursor-pointer"
+            className="transition-transform duration-300 hover:scale-110"
+            src="https://img.shields.io/badge/TAILWINDCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"
+          />
+        </div>
+        <div className="flex flex-wrap gap-3 justify-start">
+          <div>개발 도구 : </div>
+          <img
+            className="transition-transform duration-300 hover:scale-110"
             src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white"
           />
           <img
             className="transition-transform duration-300 hover:scale-110"
             src="https://img.shields.io/badge/FIGMA-F24E1E?style=for-the-badge&logo=figma&logoColor=white"
+          />
+          <img
+            className="transition-transform duration-300 hover:scale-110"
+            src="https://img.shields.io/badge/netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white"
           />
         </div>
       </>
@@ -210,7 +206,7 @@ export const description: descType[] = [
   {
     keyword: "link",
     content: (
-      <div className="font-light text-lg w-full overflow-hidden">
+      <div className="font-light text-lg w-full overflow-">
         <div className="flex flex-col items-center sm:flex-row">
           홈페이지 주소:{" "}
           <a
@@ -283,8 +279,3 @@ export const description: descType[] = [
     ),
   },
 ];
-
-function clickHandler(listName: string) {
-  const node = document.getElementById(listName);
-  node?.classList.toggle("hidden");
-}
