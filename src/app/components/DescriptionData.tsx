@@ -174,6 +174,13 @@ export const description: descType[] = [
             src="https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css&logoColor=white"
           />
         </div>
+        <ul className="font-light list-disc pl-10 break-keep mb-3">
+          <li>
+            아직 팀원 내에서 타입스크립트에 대한 이해도가 전반적으로 부족했으며,
+            프로젝트에서 구현해할 기능이 최초 계획보다 훨씬 많아져 학습에 걸리는
+            시간을 고려하여 자바스크립트를 선택했습니다.
+          </li>
+        </ul>
         <div className="flex flex-wrap gap-3 justify-start mb-3">
           <div>외부 라이브러리 : </div>
           <img
@@ -185,6 +192,20 @@ export const description: descType[] = [
             src="https://img.shields.io/badge/TAILWINDCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"
           />
         </div>
+        <ul className="font-light list-disc pl-10 break-keep mb-3">
+          <li>
+            React 기반의 웹 프로젝트이었으며, UI를 자유롭게 구축하며 팀원들 간의
+            불균형한 프론트엔드 개발 숙련을 고려하여 React를 채택.
+          </li>
+          <li>
+            TailwindCSS를 사용한 이유는 해당 라이브러리 특성상 따로 스타일
+            파일을 생성하거나 모든 태그에 클래스명을 고려할 필요없었기에
+            스타일을 직접 적용하여 작업 효율을 높이기 위함.
+          </li>
+          <li>
+            또한 TailwindCSS를 부트캠프 기간동안 학습했기에 이를 활용하기 위함.
+          </li>
+        </ul>
         <div className="flex flex-wrap gap-3 justify-start">
           <div>개발 도구 : </div>
           <img
@@ -200,6 +221,18 @@ export const description: descType[] = [
             src="https://img.shields.io/badge/netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white"
           />
         </div>
+        <ul className="font-light list-disc pl-10 break-keep mb-3">
+          <li>
+            Figma는 여러 인원이서 협업을 하며 화상 채팅을 통해 작업해야 했던
+            당시 프로젝트 환경 특성상 서로의 작업과 커서의 움직임 등이
+            즉각적으로 표시되는 Figma는 최선의 디자인툴이었습니다
+          </li>
+          <li>
+            Netlify는 Next.js를 사용하지 않았기에 Vercel을 사용할 필요가 없었던
+            이유도 있지만, 무엇보다 넉넉한 웹 배포 제한이 프로젝트 진행 도중
+            배포 테스트를 하기에 적절한 플랫폼이었습니다.
+          </li>
+        </ul>
       </>
     ),
   },
