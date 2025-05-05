@@ -64,9 +64,12 @@ export const description: descType[] = [
         <li>
           프로필 및 커뮤니티
           <ul className="font-light list-disc pl-5 break-keep">
-            <li>
+            <li onClick={() => clickHandler("comm")}>
               바로파밍 페이지 - 커뮤니티 기능
-              <ul className="font-light list-disc pl-5 break-keep hidden">
+              <ul
+                id="comm"
+                className="font-light list-disc pl-5 break-keep hidden"
+              >
                 <li>
                   게시글 조회, 작성, 수정, 삭제 - Axios 통신을 활용하여 호출한
                   멋쟁이사자처럼 강사진이 제공한 백엔드 서버의 /posts의 Get,
@@ -89,9 +92,12 @@ export const description: descType[] = [
                 </li>
               </ul>
             </li>
-            <li>
+            <li onClick={() => clickHandler("MyPage")}>
               마이 페이지 - 프로필 기능
-              <ul className="font-light list-disc pl-5 break-keep hidden">
+              <ul
+                id="MyPage"
+                className="font-light list-disc pl-5 break-keep hidden"
+              >
                 <li>
                   유저 정보 조회 및 수정 - Axios 통신을 활용하여 호출한
                   멋쟁이사자처럼 강사진이 제공한 백엔드 서버의 /users의 Get,
@@ -112,9 +118,12 @@ export const description: descType[] = [
             </li>
           </ul>
         </li>
-        <li>
+        <li onClick={() => clickHandler("Leader")}>
           프로젝트 팀 리더
-          <ul className="font-light list-disc pl-5 break-keep hidden">
+          <ul
+            id="Leader"
+            className="font-light list-disc pl-5 break-keep hidden"
+          >
             <li>정기적인 스크럼 진행 및 의견 조율.</li>
             <li>
               스케쥴을 지정하고 관리하여 마일스톤 일정 내에 정해진 작업을 마칠
@@ -274,3 +283,8 @@ export const description: descType[] = [
     ),
   },
 ];
+
+function clickHandler(listName: string) {
+  const node = document.getElementById(listName);
+  node?.classList.toggle("hidden");
+}
