@@ -38,10 +38,10 @@
  
  ### 🐝 개발 인원 소개
  
- <table style="border-collapse: collapse;">
+ <table align='center' style="border-collapse: collapse;">
      <tr>
        <td style="border: 1px solid #ddd; text-align: center;"><p align="center" style="margin: 0;"><strong>고태호</strong></p></td>
-     </tr>개
+     </tr>
      <tr>
        <td style="border: 1px solid #ddd; text-align: center;">
          <a href="https://github.com/Taiho1998">
@@ -66,12 +66,4 @@
  
  ### 📆 개발 기간
  
- <b>24.12.19 - 24.12.27 (1주차) : 프로젝트 기획(디자인 기획 및 요구사항 정의서 작성)</b>
- 
- <b>24.12.30 - 25.01.03 (2주차) : 마크업 및 더미 데이터를 사용한 동적 렌더링</b>
- 
- <b>25.01.06 - 25.01.17 (3, 4주차) : 작성된 요구사항 정의서에 따른 기능 구현</b>
- 
- <b>25.01.20 - 25.01.22 (5주차) : 발표 준비 및 최종 배포</b>
- 
- <b>25.01.31 - 25.02.24 : 고태호 개인 레포지터리에서의 리팩토링 및 타입스크립트로 변환</b>
+ <b>25.04.06 - 24.04.08 : </b>
