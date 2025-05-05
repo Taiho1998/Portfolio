@@ -130,74 +130,74 @@ export default function MusicSelection() {
 
   // const {data} = useQuery
 
-  const clickHandler = async () => {
-    setIsShow(!isShow);
-    setButtonText(isShow ? "오늘의 추천 음악 열기" : "닫기");
-    if (!isLoaded) {
-      try {
-        const res = await fetch("/api/useGoogleSheets", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+  // const clickHandler = async () => {
+  //   setIsShow(!isShow);
+  //   setButtonText(isShow ? "오늘의 추천 음악 열기" : "닫기");
+  //   if (!isLoaded) {
+  //     try {
+  //       const res = await fetch("/api/useGoogleSheets", {
+  //         method: "GET",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //       });
 
-        if (!res.ok) throw new Error("API 호출 실패");
+  //       if (!res.ok) throw new Error("API 호출 실패");
 
-        const list = await res.json();
-        const rng = seedrandom(today);
-        scores = Math.floor(rng() * list.rowsLength);
-        setTitle(list.data[scores].title);
-        setAuthor(list.data[scores].author);
-        setId(list.data[scores].idValue);
-        setIsLoaded(true);
-        return list;
-      } catch (error) {
-        console.error("Client fetch error:", error);
-        throw new Error("몬가 문제가 생겨벌임....");
-      }
-    }
-  };
+  //       const list = await res.json();
+  //       const rng = seedrandom(today);
+  //       scores = Math.floor(rng() * list.rowsLength);
+  //       setTitle(list.data[scores].title);
+  //       setAuthor(list.data[scores].author);
+  //       setId(list.data[scores].idValue);
+  //       setIsLoaded(true);
+  //       return list;
+  //     } catch (error) {
+  //       console.error("Client fetch error:", error);
+  //       throw new Error("몬가 문제가 생겨벌임....");
+  //     }
+  //   }
+  // };
 
-  if (!isLoaded && isShow) {
-    return (
-      <>
-        <div className="w-fit mx-auto mt-20 text-center">
-          <div className="loader"></div>
-        </div>
-        <p className="text-center mt-10">로딩 중입니다. 잠시만 기다려주세요!</p>
-      </>
-    );
-  }
+  // if (!isLoaded && isShow) {
+  //   return (
+  //     <>
+  //       <div className="w-fit mx-auto mt-20 text-center">
+  //         <div className="loader"></div>
+  //       </div>
+  //       <p className="text-center mt-10">로딩 중입니다. 잠시만 기다려주세요!</p>
+  //     </>
+  //   );
+  // }
 
-  return (
-    <div
-      id="MusicRecommend"
-      className="mt-5 w-fit text-center mx-auto object-cover"
-    >
-      <button
-        onClick={clickHandler}
-        className="cursor-pointer border rounded-lg w-fit p-3 inline-block group hover:bg-[#EE6533] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all"
-      >
-        {buttonText}
-      </button>
-      {isShow && typeof scores === "number" && (
-        <>
-          <h3 className="font-semibold text-3xl">오늘의 추천 음악</h3>
-          <a
-            target="__blank"
-            href={`https://www.youtube.com/watch?v=${id}`}
-            className="block w-fit text-center"
-          >
-            <img
-              src={`https://img.youtube.com/vi/${id}/0.jpg`}
-              alt={`${title}`}
-            />
-            <h4>{title}</h4>
-            <p>{author}</p>
-          </a>
-        </>
-      )}
-    </div>
-  );
+  // return (
+  //   <div
+  //     id="MusicRecommend"
+  //     className="mt-5 w-fit text-center mx-auto object-cover"
+  //   >
+  //     <button
+  //       onClick={clickHandler}
+  //       className="cursor-pointer border rounded-lg w-fit p-3 inline-block group hover:bg-[#EE6533] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all"
+  //     >
+  //       {buttonText}
+  //     </button>
+  //     {isShow && typeof scores === "number" && (
+  //       <>
+  //         <h3 className="font-semibold text-3xl">오늘의 추천 음악</h3>
+  //         <a
+  //           target="__blank"
+  //           href={`https://www.youtube.com/watch?v=${id}`}
+  //           className="block w-fit text-center"
+  //         >
+  //           <img
+  //             src={`https://img.youtube.com/vi/${id}/0.jpg`}
+  //             alt={`${title}`}
+  //           />
+  //           <h4>{title}</h4>
+  //           <p>{author}</p>
+  //         </a>
+  //       </>
+  //     )}
+  //   </div>
+  // );
 }

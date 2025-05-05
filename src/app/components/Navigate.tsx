@@ -16,20 +16,23 @@ export default function Navigate() {
       </Link>
       <Link
         href="/project"
+        // className={`relative ${
+        //   path === "/project" ? "text-black" : "text-[#B8B8B8]"
+        // } font-semibold md:text-4xl hover:underline underline-offset-4 after:content-[''] after:absolute after:right-[-16px] after:h-full xl:after:w-[3px] after:w-[1px] after:bg-black`}
         className={`relative ${
           path === "/project" ? "text-black" : "text-[#B8B8B8]"
-        } font-semibold md:text-4xl hover:underline underline-offset-4 after:content-[''] after:absolute after:right-[-16px] after:h-full xl:after:w-[3px] after:w-[1px] after:bg-black`}
+        } font-semibold md:text-4xl hover:underline underline-offset-4`}
       >
         Projects
       </Link>
-      <Link
+      {/* <Link
         href="/etc"
         className={`${
           path === "/etc" ? "text-black" : "text-[#B8B8B8]"
         }  font-semibold md:text-4xl hover:underline underline-offset-4`}
       >
         기타
-      </Link>
+      </Link> */}
     </div>
   );
 }
