@@ -43,9 +43,9 @@
        <td style="border: 1px solid #ddd; text-align: center;"><p align="center" style="margin: 0;"><strong>고태호</strong></p></td>
      </tr>
      <tr>
-       <td style="border: 1px solid #ddd; text-align: center;">
-         <a href="https://github.com/Taiho1998">
-           <img src="./public/taiho.png" width="150" height="150" style="display: block; margin: auto;s">
+       <td style="border: 1px solid #ddd;">
+         <a href="https://github.com/Taiho1998" style="display: block; text-align: center;">
+           <img align='center' src="./public/taiho.png" width="150" height="150" style="display: inline;">
            <p align="center" style="margin: 0;">Taiho1998</p>
          </a>
        </td>
