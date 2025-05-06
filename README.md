@@ -45,7 +45,7 @@
      <tr>
        <td style="border: 1px solid #ddd; text-align: center;">
          <a href="https://github.com/Taiho1998">
-           <img src="./public/images/reademe/taiho.png" width="150" height="150">
+           <img src="./public/taiho.png" width="150" height="150">
            <p align="center" style="margin: 0;">Taiho1998</p>
          </a>
        </td>

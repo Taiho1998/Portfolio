@@ -160,7 +160,7 @@ export const description: descType[] = [
     content: (
       <>
         <div className="flex flex-wrap gap-3 justify-start mb-3">
-          <div>기본적인 프론트엔드 기술 : </div>
+          <span>기본적인 프론트엔드 기술 : </span>
           <img
             className="transition-transform duration-300 hover:scale-110"
             src="https://img.shields.io/badge/JAVASCRIPT-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white"
@@ -182,7 +182,7 @@ export const description: descType[] = [
           </li>
         </ul>
         <div className="flex flex-wrap gap-3 justify-start mb-3">
-          <div>외부 라이브러리 : </div>
+          <span>외부 라이브러리 : </span>
           <img
             className="transition-transform duration-300 hover:scale-110"
             src="https://img.shields.io/badge/REACT-61DAFB?style=for-the-badge&logo=react&logoColor=white"
@@ -207,7 +207,22 @@ export const description: descType[] = [
           </li>
         </ul>
         <div className="flex flex-wrap gap-3 justify-start">
-          <div>개발 도구 : </div>
+          <span>상태 관리 및 데이터 페칭 : </span>
+          <img src="https://img.shields.io/badge/zustand-00B899?style=for-the-badge&logo=&logoColor=white" />
+          <img src="https://img.shields.io/badge/tanstack query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white" />
+        </div>
+        <ul className="font-light list-disc pl-10 break-keep mb-3">
+          <li>
+            zustand의 경우 낮은 학습 난이도로 인해 상태 관리 라이브러리로써
+            활용하기 용이하며, 코드량 또한 효과적으로 줄일 수 있었습니다.
+          </li>
+          <li>
+            React-query는 데이터 패칭, 캐싱 등, 직접 서버 상태 관리를 하는것
+            보다 생산성을 높여주기에 선택했습니다.
+          </li>
+        </ul>
+        <div className="flex flex-wrap gap-3 justify-start">
+          <span>개발 도구 : </span>
           <img
             className="transition-transform duration-300 hover:scale-110"
             src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white"
