@@ -108,12 +108,12 @@ export default function Home() {
                   className="transition-transform duration-300 hover:scale-110"
                   src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=white"
                 />
-              </div>
-              <div className="flex flex-wrap gap-3 mb-3 justify-center xl:justify-start">
                 <img
                   className="transition-transform duration-300 hover:scale-110"
                   src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white"
                 />
+              </div>
+              <div className="flex flex-wrap gap-3 mb-3 justify-center xl:justify-start">
                 <img
                   className="transition-transform duration-300 hover:scale-110"
                   src="https://img.shields.io/badge/JAVASCRIPT-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white"
