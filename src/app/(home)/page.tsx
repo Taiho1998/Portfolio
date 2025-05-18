@@ -44,6 +44,22 @@ export default function Home() {
           </div>
           <CopyTextButton copyText={"tgo12323@gmail.com"} />
         </div>
+        <h3 className="font-bold text-2xl xl:text-[32px] mb-5 hover:text-[#EE6533] mt-[40px]">
+          Link
+        </h3>
+        <a
+          target="_blank"
+          href="https://github.com/Taiho1998"
+          className="hover:underline hover:underline-offset-4"
+        >
+          <div className="border w-fit p-3 inline-block group bg-[#2b3137] text-[#F5F5F5] xl:bg-transparent xl:text-black hover:bg-[#2b3137] hover:text-[#F5F5F5] hover:scale-110 hover:transition-all not-hover:transition-all">
+            <img
+              src="/icons/github.png"
+              alt="github icon"
+              className="box-border h-[28px] inline rounded-md  border border-white bg-white xl:border-0 xl:bg-transparent group-hover:border group-hover:border-white  group-hover:bg-white"
+            />
+          </div>
+        </a>
         <div className="flex flex-col xl:flex-row mt-20 text-center xl:text-left gap-5 xl:gap-0">
           <div className="grow mx-auto xl:mx-0">
             <div className="w-fit xl:ml-auto mr-3">

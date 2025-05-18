@@ -27,7 +27,7 @@ export default function ProjDescription() {
               project === 0 ? "font-extrabold" : ""
             }`}
           >
-            바로Farm
+            바로Farm{project === 0 ? "<" : ""}
           </span>
           <span
             onClick={() => {
@@ -38,7 +38,7 @@ export default function ProjDescription() {
               project === 1 ? "font-extrabold" : ""
             }`}
           >
-            바로Farm Refactored
+            바로Farm Refactored{project === 1 ? "<" : ""}
           </span>
         </div>
         <h2 className="font-extrabold text-center xl:text-start text-4xl mb-[20px] xl:mb-[40px] break-keep">
