@@ -39,7 +39,7 @@ export const description: descType[] = [
             농산물 유통 판매 사이트로써, 기존에 생산지에서 중간 유통을 거쳐
             소비자에게 도달하는 과정을 모바일 직거래 플랫폼으로 대체하여 유통
             과정을 생략하고 생산자가 빠르게 소비자에게 상품을 판매할 수 있는
-            사이트를 설계하고자 했습니다.
+            사이트를 설계하고자 했습니다
           </li>
         </ul>
 
@@ -61,7 +61,7 @@ export const description: descType[] = [
         <ul className="list-disc pl-5 break-keep">
           <li>
             또한 제공받은 백엔드 API와 DB를 기반으로 기초적인 React 스킬을 복습
-            및 활용을 목적으로 두었습니다.
+            및 활용을 목적으로 두었습니다
           </li>
         </ul>
         <br />
@@ -99,7 +99,7 @@ export const description: descType[] = [
                     사진 미첨부 게시물의 분류
                   </span>
                   - 사진을 첨부하지 않은 게시물의 경우 noPic 타입으로 설정하여
-                  메인화면에 표시되지 않게 했습니다.
+                  메인화면에 표시되는 현상을 방지
                 </li>
               </ul>
             </li>
@@ -153,16 +153,16 @@ export const description: descType[] = [
     feature: (
       <ul className="font-light list-disc pl-5 break-keep">
         <li>
-          특징으로는 커뮤니티 기능을 추가하여 레시피를 공유하거나 판매자의
-          바이럴 마켓팅과 같은 유저 간의 정보 공유가 원활이 이뤄지게 함
+          커뮤니티 기능을 추가하여 레시피를 공유하거나 판매자의 바이럴 마켓팅과
+          같은 유저 간의 정보 공유가 원활이 이뤄질 수 있음
         </li>
         <br />
         <li>
           카카오톡 API를 활용하여 간편 로그인이 가능하고, 카카오페이 기능을
-          사용하여 결제할 수 있습니다
+          사용하여 간편 결제 기능 이용 가능
         </li>
         <br />
-        <li>Zustand를 이용하여 상태 관리를 했습니다</li>
+        <li>Zustand를 이용한 상태 관리</li>
         <br />
         <li>
           두 유형의 유저 타입이 존재: 판매자의 경우 구매와 판매 기능의 이용이
