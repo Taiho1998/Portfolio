@@ -1,7 +1,3 @@
-<br>
-<div align='center'> <img src='./public/GithubThumbnail.png' width=50%> </div>
-<br>
-
 ## <br> <div align='center'> 웹 포트폴리오 프로젝트, "THK's Portfolio" </div> <br>
 
 <br>
