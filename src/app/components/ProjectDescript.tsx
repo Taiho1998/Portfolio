@@ -27,7 +27,7 @@ export default function ProjDescription() {
               project === 0 ? "font-extrabold" : ""
             }`}
           >
-            바로Farm
+            바로Farm{project === 0 ? "<" : ""}
           </span>
           <span
             onClick={() => {
@@ -38,14 +38,22 @@ export default function ProjDescription() {
               project === 1 ? "font-extrabold" : ""
             }`}
           >
-            바로Farm Refactored
+            바로Farm Refactored{project === 1 ? "<" : ""}
           </span>
         </div>
         <h2 className="font-extrabold text-center xl:text-start text-4xl mb-[20px] xl:mb-[40px] break-keep">
           농산물 직거래 플랫폼 웹 프로젝트,{" "}
-          <span className="text-[#72BF78]">
+          <a
+            href={`${
+              project === 0
+                ? "https://barofarm.netlify.app/"
+                : "https://barofarm-refactoredtk.netlify.app/"
+            }`}
+            target="_blank"
+            className="text-[#72BF78] hover:underline cursor-pointer"
+          >
             바로Farm{project === 1 && " Refactored"}
-          </span>
+          </a>
         </h2>
         <div className="flex flex-wrap gap-1 md:gap-0">
           <div className="grow" id="intro" onClick={() => setTag("intro")}>
