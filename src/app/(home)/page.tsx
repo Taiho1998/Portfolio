@@ -13,7 +13,6 @@ export default function Home() {
     <>
       <Navigate />
       <div className="text-center mt-5 xl:mt-0">
-        <ProfileImg />
         <h1 className="text-xl xl:text-4xl font-bold mt-[15px] break-keep">
           안녕하십니까, 프론트엔드 개발자{" "}
           <span className="text-[#EE6533] break-keep">고태호</span>입니다!
