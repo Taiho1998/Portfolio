@@ -22,8 +22,7 @@
     "react-toastify": "^11.0.5",
     "seedrandom": "^3.0.5",
     "spotify-api.js": "^9.2.5",
-    "swiper": "^11.2.6",
-    "tone": "^15.1.21"
+    "swiper": "^11.2.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
