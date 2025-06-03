@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         <script src="http://unpkg.com/tone"></script>
-        <div className="bg-white min-h-[500px] md:mx-[60px] mt-[60px] mb-[120px] py-10 px-[55px] rounded-4xl xl:rounded-none overflow-hidden">
+        <div className="bg-white min-h-[500px] md:mx-[60px] mt-[60px] mb-[120px] py-10 px-[55px] rounded-4xl xl:rounded-none">
           {children}
         </div>
         <ToastContainer
