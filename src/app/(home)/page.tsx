@@ -2,8 +2,6 @@ import Navigate from "../components/Navigate";
 import Github from "../components/Github";
 import { Metadata } from "next";
 import CopyTextButton from "../components/CopyTextButton";
-import ProfileImg from "../components/ProfileImg";
-import MainModal from "../components/mainModal";
 
 export const metadata: Metadata = {
   title: "About Me",
@@ -158,7 +156,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-     <MainModal/>
     </>
   );
 }
