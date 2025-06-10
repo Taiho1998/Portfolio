@@ -15,6 +15,13 @@
 body {
   background: var(--background);
   font-family: Pretendard;
+  -ms-overflow-style: none;
+  overflow-y: scroll;
+}
+
+/* 스크롤바 감추기 용 */
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .loader {
