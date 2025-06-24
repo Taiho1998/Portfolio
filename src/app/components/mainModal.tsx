@@ -36,13 +36,13 @@ export default function MainModal() {
       {path === "/" && (
         <>
           <div className="modal my-[400px] text-center">
-            <span className="text-2xl font-medium text-gray-dark hover:text-[#EE6533] transition-colors animate-pulse">
+            <span className="text-4xl font-medium text-gray-dark hover:text-[#EE6533] transition-colors animate-pulse">
               아래로 스크롤 해보세요!
             </span>
             <img
               src="/icons/ScrollArrow.svg"
               alt="ScrollImage"
-              className="rotate-90 size-6 mx-auto animate-bounce"
+              className="rotate-90 size-6 mt-3 mx-auto animate-[scroll_1s_infinite]"
             />
           </div>
 
