@@ -39,7 +39,7 @@
 
 ## 🔗 관련 링크
 
-<b> 웹 포트폴리오 배포 주소: [웹 포트폴리오 링크](thkwebportfolio.netlify.app/)</b>
+<b> 웹 포트폴리오 배포 주소: [웹 포트폴리오 링크](https://thkwebportfolio.netlify.app/)</b>
 
 <b> 피그마(Figma): [피그마 링크](https://www.figma.com/design/uDOsnNP7xXQvsUChgp5Jmx/Wood-Portfolio-Draft?t=vzFBXXHQ9iJs29iq-0)</b>
 
